@@ -3,28 +3,28 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Menzi Media</title>
+<title>Menzi Media | Professional Photography</title>
 
 <style>
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial,sans-serif;
+font-family:Arial, sans-serif;
 }
 
 body{
-background:#0f0f0f;
-color:white;
-line-height:1.6;
+background:#0a0a0a;
+color:#fff;
 }
 
-header{
-background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),
-url('https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=1200');
+/* HERO */
+.hero{
+height:100vh;
+background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.85)),
+url('https://images.unsplash.com/photo-1502920917128-1aa500764b5b');
 background-size:cover;
 background-position:center;
-height:100vh;
 display:flex;
 flex-direction:column;
 justify-content:center;
@@ -33,56 +33,81 @@ text-align:center;
 padding:20px;
 }
 
-header h1{
+.hero h1{
 font-size:4rem;
 color:#d4af37;
+letter-spacing:3px;
 }
 
-header p{
-font-size:1.3rem;
+.hero p{
+font-size:1.2rem;
 margin-top:10px;
+opacity:0.9;
 }
 
 .btn{
-display:inline-block;
 margin-top:25px;
+padding:14px 28px;
 background:#d4af37;
-color:black;
-padding:15px 30px;
+color:#000;
 text-decoration:none;
 font-weight:bold;
-border-radius:8px;
+border-radius:30px;
+transition:0.3s;
+display:inline-block;
 }
 
+.btn:hover{
+transform:scale(1.05);
+}
+
+/* SECTIONS */
 section{
-padding:70px 10%;
+padding:80px 10%;
 }
 
 h2{
-color:#d4af37;
-margin-bottom:20px;
 text-align:center;
+color:#d4af37;
+margin-bottom:40px;
+font-size:2rem;
 }
 
+/* ABOUT */
 .about{
-text-align:center;
 max-width:800px;
 margin:auto;
+text-align:center;
+font-size:1.1rem;
+opacity:0.9;
 }
 
+/* SERVICES */
 .services{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:20px;
-margin-top:30px;
 }
 
 .card{
-background:#1a1a1a;
-padding:20px;
-border-radius:10px;
+background:#141414;
+padding:25px;
+border-radius:12px;
+border:1px solid #222;
+transition:0.3s;
 }
 
+.card:hover{
+transform:translateY(-10px);
+border-color:#d4af37;
+}
+
+.card h3{
+color:#d4af37;
+margin-bottom:10px;
+}
+
+/* GALLERY */
 .gallery{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
@@ -91,44 +116,59 @@ gap:15px;
 
 .gallery img{
 width:100%;
-height:250px;
+height:260px;
 object-fit:cover;
-border-radius:10px;
+border-radius:12px;
+transition:0.3s;
 }
 
+.gallery img:hover{
+transform:scale(1.03);
+}
+
+/* CONTACT */
 .contact{
 text-align:center;
 }
 
+.contact p{
+margin:8px 0;
+font-size:1.1rem;
+}
+
+/* FOOTER */
 footer{
-background:black;
 text-align:center;
 padding:20px;
-margin-top:30px;
+background:#000;
+border-top:1px solid #222;
+margin-top:40px;
 }
 </style>
 </head>
 
 <body>
 
-<header>
+<!-- HERO -->
+<div class="hero">
 <h1>MENZI MEDIA</h1>
-<p>Capturing Moments. Creating Memories.</p>
+<p>Capturing Moments. Creating Cinematic Memories.</p>
 
-<a class="btn" href="https://wa.me/26777929262">
+<a class="btn" href="https://wa.me/26777929262" target="_blank">
 Book Now on WhatsApp
 </a>
-</header>
+</div>
 
+<!-- ABOUT -->
 <section>
-<h2>About Menzi Media</h2>
+<h2>About Us</h2>
 <div class="about">
-<p>
-Menzi Media is a creative photography and videography brand dedicated to capturing life's most valuable moments. We specialize in weddings, portraits, events, content creation, and professional media services.
-</p>
+Menzi Media is a professional photography and videography brand based in Botswana.
+We specialize in weddings, portraits, events, and creative visual storytelling.
 </div>
 </section>
 
+<!-- SERVICES -->
 <section>
 <h2>Our Services</h2>
 
@@ -136,53 +176,54 @@ Menzi Media is a creative photography and videography brand dedicated to capturi
 
 <div class="card">
 <h3>Photography</h3>
-<p>Weddings, Portraits, Graduations, Birthdays, Family Photoshoots & Event Coverage.</p>
+<p>Weddings, portraits, birthdays, graduations & events.</p>
 </div>
 
 <div class="card">
 <h3>Videography</h3>
-<p>Wedding Films, Event Coverage, Music Videos and Promotional Videos.</p>
+<p>Wedding films, event coverage, music videos & promos.</p>
 </div>
 
 <div class="card">
 <h3>Content Creation</h3>
-<p>Reels, TikTok Content, Business Branding and Social Media Content.</p>
+<p>Social media content, reels, branding visuals.</p>
 </div>
 
 <div class="card">
-<h3>Editing & Design</h3>
-<p>Photo Editing, Video Editing, Posters, Flyers and Graphic Design.</p>
+<h3>Editing</h3>
+<p>Photo editing, video editing & graphic design.</p>
 </div>
 
 </div>
 </section>
 
+<!-- GALLERY -->
 <section>
-<h2>Portfolio Gallery</h2>
+<h2>Portfolio</h2>
 
 <div class="gallery">
-<img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=800" alt="">
-<img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?w=800" alt="">
-<img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=800" alt="">
-<img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=800" alt="">
+<img src="https://images.unsplash.com/photo-1519741497674-611481863552">
+<img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc">
+<img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4">
+<img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf">
 </div>
 
 </section>
 
+<!-- CONTACT -->
 <section class="contact">
 <h2>Contact Us</h2>
 
-<p>📍 Botswana</p>
+<p>📍 Botswana (Local)</p>
 <p>📱 WhatsApp: +267 77 929 262</p>
 
-<a class="btn" href="https://wa.me/26777929262">
-Book Your Session
+<a class="btn" href="https://wa.me/26777929262" target="_blank">
+Book a Session
 </a>
-
 </section>
 
 <footer>
-<p>© 2026 Menzi Media. All Rights Reserved.</p>
+© 2026 Menzi Media | All Rights Reserved
 </footer>
 
 </body>
