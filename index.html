@@ -284,13 +284,13 @@ Menzi Media is a creative photography and videography brand dedicated to capturi
 
 <form class="booking-form">
 
-<input type="text" placeholder="Full Name" required>
+<input type="text" id="name" placeholder="Full Name" required>
 
-<input type="tel" placeholder="WhatsApp Number" required>
+<input type="tel" id="phone" placeholder="WhatsApp Number" required>
 
-<input type="email" placeholder="Email Address" required>
+<input type="email" id="email" placeholder="Email Address" required>
 
-<select required>
+<select id="shoot" required>
 <option value="">Select Type of Shoot</option>
 <option>Wedding Photography</option>
 <option>Portrait Photography</option>
@@ -303,13 +303,15 @@ Menzi Media is a creative photography and videography brand dedicated to capturi
 <option>Other</option>
 </select>
 
-<input type="date" required>
+<input type="date" id="date" required>
 
-<input type="text" placeholder="Location" required>
+<input type="text" id="location" placeholder="Location" required>
 
-<textarea placeholder="Tell Us About Your Shoot..." rows="5"></textarea>
+<textarea id="details" placeholder="Tell Us About Your Shoot..." rows="5"></textarea>
 
-<a class="booking-btn" href="https://wa.me/26777929262" target="_blank">
+<button type="button" class="booking-btn" onclick="sendToWhatsApp()">
+Submit Booking Request
+</button>
 Submit Booking Request
 </a>
 
@@ -338,5 +340,41 @@ Book Your Session
 <a href="https://wa.me/26777929262" class="floating-whatsapp" target="_blank">
 💬 WhatsApp
 </a>
+<script>
+
+function sendToWhatsApp(){
+
+let name=document.getElementById("name").value;
+let phone=document.getElementById("phone").value;
+let email=document.getElementById("email").value;
+let shoot=document.getElementById("shoot").value;
+let date=document.getElementById("date").value;
+let location=document.getElementById("location").value;
+let details=document.getElementById("details").value;
+
+let message=`Hello Menzi Media,
+
+📸 NEW BOOKING REQUEST
+
+👤 Name: ${name}
+
+📱 WhatsApp: ${phone}
+
+📧 Email: ${email}
+
+🎥 Type of Shoot: ${shoot}
+
+📅 Event Date: ${date}
+
+📍 Location: ${location}
+
+📝 Details:
+${details}`;
+
+window.open("https://wa.me/26777929262?text="+encodeURIComponent(message));
+
+}
+
+</script>
 </body>
 </html>
